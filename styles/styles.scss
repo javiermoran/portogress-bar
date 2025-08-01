@@ -1,0 +1,83 @@
+@use './themes.scss';
+@use './vars.scss';
+
+.pb {
+	@for $i from 5 through 100 {
+		@if ($i % 5 == 0) {
+			&#{$i} {
+				background: linear-gradient(
+					to right,
+					var(--progress-bar-color-5, transparent),
+					var(--progress-bar-color-#{$i})
+				);
+				border-radius: 2px;
+				color: transparent;
+				display: inline-block;
+				height: var(--bar-height);
+				left: 0;
+				position: var(--bar-position);
+				top: 1.5rem;
+				width: calc(#{$i + '%'} - 0.8rem);
+
+				&-l::after {
+					color: grey;
+					content: '#{$i}%';
+					font-size: 0.6rem;
+					position: var(--label-position);
+					right: var(--bar-right-pos);
+					top: var(--label-top);
+					padding: 0.2rem;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}
+
+.portogress-hide-bars {
+	.pb {
+		@for $i from 5 through 100 {
+			@if ($i % 5 == 0) {
+				&#{$i} {
+					width: 0;
+				}
+			}
+		}
+	}
+}
+
+div.portogress-dialog {
+	input[type='range'] {
+		width: 100%;
+	}
+
+	&-buttons {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 2.5rem;
+	}
+
+	&__slider-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		span {
+			margin-top: 0.5rem;
+			left: -8px;
+			position: relative;
+		}
+		input[type='range']::-webkit-slider-runnable-track {
+			background: linear-gradient(
+				to right,
+				var(--progress-bar-color-5, transparent),
+				var(--progress-bar-color-100, transparent)
+			);
+			border-radius: 0.5rem;
+			height: 0.5rem;
+		}
+	}
+}
+
+.portogress-dialog-modal-container {
+	max-width: 90% !important;
+}

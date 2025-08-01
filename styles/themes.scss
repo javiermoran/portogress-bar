@@ -1,0 +1,141 @@
+:root {
+	.portogress-chalkboard-theme {
+		@for $i from 5 through 100 {
+			@if ($i % 5 == 0) {
+				--progress-bar-color-#{$i}: #ffffff;
+			}
+		}
+	}
+	.portogress-cool-theme {
+		--progress-bar-color-5: #00bfff;
+		--progress-bar-color-10: #00b9ff;
+		--progress-bar-color-15: #00b3ff;
+		--progress-bar-color-20: #00adff;
+		--progress-bar-color-25: #00a7ff;
+		--progress-bar-color-30: #009fff;
+		--progress-bar-color-35: #0097ff;
+		--progress-bar-color-40: #008fff;
+		--progress-bar-color-45: #0087ff;
+		--progress-bar-color-50: #007fff;
+		--progress-bar-color-55: #0077e6;
+		--progress-bar-color-60: #006fcd;
+		--progress-bar-color-65: #0067b4;
+		--progress-bar-color-70: #005f9b;
+		--progress-bar-color-75: #005782;
+		--progress-bar-color-80: #00bfa5;
+		--progress-bar-color-85: #00b59a;
+		--progress-bar-color-90: #00ab8f;
+		--progress-bar-color-95: #00a184;
+		--progress-bar-color-100: #08ffce;
+	}
+	.portogress-forest-theme {
+		--progress-bar-color-5: #a3d9a5;
+		--progress-bar-color-10: #98d497;
+		--progress-bar-color-15: #8dce89;
+		--progress-bar-color-20: #82c87b;
+		--progress-bar-color-25: #77c26d;
+		--progress-bar-color-30: #6cbc5f;
+		--progress-bar-color-35: #61b651;
+		--progress-bar-color-40: #56b043;
+		--progress-bar-color-45: #4ba935;
+		--progress-bar-color-50: #409f2a;
+		--progress-bar-color-55: #3b8f26;
+		--progress-bar-color-60: #367f22;
+		--progress-bar-color-65: #316f1e;
+		--progress-bar-color-70: #2c5f1a;
+		--progress-bar-color-75: #275016;
+		--progress-bar-color-80: #224012;
+		--progress-bar-color-85: #8b5a2b;
+		--progress-bar-color-90: #7c4821;
+		--progress-bar-color-95: #6e3918;
+		--progress-bar-color-100: #5f2a0f;
+	}
+	.portogress-warm-theme {
+		--progress-bar-color-5: #ffb3b3;
+		--progress-bar-color-10: #ffaaaa;
+		--progress-bar-color-15: #ffa1a1;
+		--progress-bar-color-20: #ff9999;
+		--progress-bar-color-25: #ff9090;
+		--progress-bar-color-30: #ff8787;
+		--progress-bar-color-35: #ff7f7f;
+		--progress-bar-color-40: #ff7676;
+		--progress-bar-color-45: #ff6d6d;
+		--progress-bar-color-50: #ff6565;
+		--progress-bar-color-55: #e65c5c;
+		--progress-bar-color-60: #cc5353;
+		--progress-bar-color-65: #b34a4a;
+		--progress-bar-color-70: #b56b6b;
+		--progress-bar-color-75: #a16262;
+		--progress-bar-color-80: #8d5959;
+		--progress-bar-color-85: #a66a6a;
+		--progress-bar-color-90: #f48a8a;
+		--progress-bar-color-95: #bd5858;
+		--progress-bar-color-100: #992e2e;
+	}
+	.portogress-cyberpunk-theme {
+		--progress-bar-color-5: #00ffff;
+		--progress-bar-color-10: #00e5e5;
+		--progress-bar-color-15: #00cccc;
+		--progress-bar-color-20: #00b3b3;
+		--progress-bar-color-25: #009999;
+		--progress-bar-color-30: #008080;
+		--progress-bar-color-35: #006666;
+		--progress-bar-color-40: #004d4d;
+		--progress-bar-color-45: #003333;
+		--progress-bar-color-50: #c986ff;
+		--progress-bar-color-55: #b966d3;
+		--progress-bar-color-60: #cc00cc;
+		--progress-bar-color-65: #b300b3;
+		--progress-bar-color-70: #990099;
+		--progress-bar-color-75: #800080;
+		--progress-bar-color-80: #660066;
+		--progress-bar-color-85: #980098;
+		--progress-bar-color-90: #ff4dff;
+		--progress-bar-color-95: #ff33ff;
+		--progress-bar-color-100: #f202f2;
+	}
+	.portogress-eighties-theme {
+		--progress-bar-color-5: #f92672;
+		--progress-bar-color-10: #fd5ff1;
+		--progress-bar-color-15: #a6e22e;
+		--progress-bar-color-20: #e6db74;
+		--progress-bar-color-25: #66d9ef;
+		--progress-bar-color-30: #ae81ff;
+		--progress-bar-color-35: #cc6633;
+		--progress-bar-color-40: #75715e;
+		--progress-bar-color-45: #f8f8f2;
+		--progress-bar-color-50: #f92672;
+		--progress-bar-color-55: #fd971f;
+		--progress-bar-color-60: #a6e22e;
+		--progress-bar-color-65: #e6db74;
+		--progress-bar-color-70: #66d9ef;
+		--progress-bar-color-75: #ae81ff;
+		--progress-bar-color-80: #cc6633;
+		--progress-bar-color-85: #75715e;
+		--progress-bar-color-90: #f8f8f2;
+		--progress-bar-color-95: #fd971f;
+		--progress-bar-color-100: #f92672;
+	}
+	.portogress-rainbow-theme {
+		--progress-bar-color-5: #ffcccc;
+		--progress-bar-color-10: #ffd9b3;
+		--progress-bar-color-15: #ffffcc;
+		--progress-bar-color-20: #d9ffcc;
+		--progress-bar-color-25: #ccffcc;
+		--progress-bar-color-30: #ccffd9;
+		--progress-bar-color-35: #ccffff;
+		--progress-bar-color-40: #b3d9ff;
+		--progress-bar-color-45: #ccccff;
+		--progress-bar-color-50: #d9b3ff;
+		--progress-bar-color-55: #ffccff;
+		--progress-bar-color-60: #ffccd9;
+		--progress-bar-color-65: #ffcccc;
+		--progress-bar-color-70: #ffd9b3;
+		--progress-bar-color-75: #ffffcc;
+		--progress-bar-color-80: #d9ffcc;
+		--progress-bar-color-85: #ccffcc;
+		--progress-bar-color-90: #ccffd9;
+		--progress-bar-color-95: #ccffff;
+		--progress-bar-color-100: #b3d9ff;
+	}
+}

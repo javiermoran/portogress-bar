@@ -1,0 +1,9 @@
+{
+	"id": "portogress-bar",
+	"name": "Portogress Bar",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "A progress bar for checkboxes in Obsidian.",
+	"author": "Porto Hamwich",
+	"isDesktopOnly": false
+}

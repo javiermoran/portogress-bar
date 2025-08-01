@@ -1,0 +1,17 @@
+:root {
+	--bar-height: 2px;
+	--label-top: -1rem;
+	--bar-position: absolute;
+	--bar-right-pos: 0;
+	--bar-width: 100%;
+	--label-position: absolute;
+
+	.portogress-hide-bars {
+		--bar-height: 0;
+		--label-top: 0;
+		--bar-position: static;
+		--bar-right-pos: none;
+		--bar-width: auto;
+		--label-position: relative;
+	}
+}
