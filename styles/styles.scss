@@ -81,3 +81,19 @@ div.portogress-dialog {
 .portogress-dialog-modal-container {
 	max-width: 90% !important;
 }
+
+#portogress-summary {
+	bottom: 0.3rem;
+	position: fixed;
+	left: 1rem;
+	width: calc(100% - 1rem);
+	.pb-label {
+		color: grey;
+		font-size: 0.6rem;
+		top: 4px;
+		position: relative;
+	}
+	.pb {
+		position: absolute;
+	}
+}

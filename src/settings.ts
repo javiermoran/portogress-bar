@@ -54,6 +54,18 @@ export class PortogressSettingTab extends PluginSettingTab {
 			);
 
 		new Setting(containerEl)
+			.setName('Checkboxes percentage')
+			.setDesc('Show checkboxes percentage per note')
+			.addToggle((text) =>
+				text
+					.setValue(this.plugin.settings.showLabels)
+					.onChange(async (value) => {
+						this.plugin.settings.checkboxesPercentage = value;
+						await this.plugin.saveSettings();
+					})
+			);
+
+		new Setting(containerEl)
 			.setName('Theme')
 			.setDesc('Color theme for portogress bars')
 			.addDropdown((dropdown) =>

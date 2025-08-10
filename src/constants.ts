@@ -7,6 +7,7 @@ export interface PortogressBarSettings {
 	showBars: boolean;
 	minLabelPercentage: number;
 	theme: string;
+	checkboxesPercentage: boolean;
 }
 
 export const DEFAULT_SETTINGS: PortogressBarSettings = {
@@ -14,6 +15,7 @@ export const DEFAULT_SETTINGS: PortogressBarSettings = {
 	showBars: true,
 	minLabelPercentage: 60,
 	theme: 'cool',
+	checkboxesPercentage: false,
 };
 
 export const THEMES = {

@@ -8,6 +8,7 @@ import {
 	PLUGIN_ID,
 	PortogressBarSettings,
 } from './constants';
+import { generatePortogressCheckboxSummary } from './checkboxes-percentage';
 
 export default class PortogressBar extends Plugin {
 	settings: PortogressBarSettings;
@@ -21,6 +22,7 @@ export default class PortogressBar extends Plugin {
 			name: 'Generate Portogress Bar',
 			editorCallback: (editor: Editor) => {
 				generatePortogressBars(this, editor);
+				generatePortogressCheckboxSummary(editor);
 			},
 		});
 

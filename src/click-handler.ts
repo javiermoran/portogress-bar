@@ -1,9 +1,22 @@
 import { Editor, MarkdownView, Modal } from 'obsidian';
 import { PLUGIN_NAME } from './constants';
+import { generatePortogressCheckboxSummary } from './checkboxes-percentage';
 
 export function clickHandler(evt: MouseEvent) {
 	const editor: Editor =
 		this.app.workspace.getActiveViewOfType(MarkdownView)?.editor;
+
+	if (
+		(evt.target as HTMLElement).tagName === 'INPUT' &&
+		(evt.target as HTMLElement).classList.contains(
+			'task-list-item-checkbox'
+		) &&
+		this.settings.checkboxesPercentage
+	) {
+		setTimeout(() => {
+			generatePortogressCheckboxSummary(editor);
+		});
+	}
 
 	if (
 		this.app.workspace.getActiveViewOfType(MarkdownView)?.getMode() ===
