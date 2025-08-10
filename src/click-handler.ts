@@ -14,7 +14,7 @@ export function clickHandler(evt: MouseEvent) {
 		this.settings.checkboxesPercentage
 	) {
 		setTimeout(() => {
-			generatePortogressCheckboxSummary(editor);
+			generatePortogressCheckboxSummary(this.app, editor);
 		});
 	}
 

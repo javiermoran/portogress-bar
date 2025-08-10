@@ -22,14 +22,13 @@ export default class PortogressBar extends Plugin {
 			name: 'Generate Portogress Bar',
 			editorCallback: (editor: Editor) => {
 				generatePortogressBars(this, editor);
-				generatePortogressCheckboxSummary(editor);
+				generatePortogressCheckboxSummary(this.app, editor);
 			},
 		});
 
 		//Addd ribbon icon
 		this.addRibbonIcon('percent-sign-glyph', 'PortogressBar', () => {
 			const commands = (this.app as any).commands;
-			console.log(`${PLUGIN_ID}:${COMMAND_ID}`);
 			commands.executeCommandById(`${PLUGIN_ID}:${COMMAND_ID}`);
 		});
 
@@ -39,8 +38,14 @@ export default class PortogressBar extends Plugin {
 		// Register event on view focus
 		this.registerEvent(
 			this.app.workspace.on('active-leaf-change', (leaf) => {
+				const view = leaf?.view as unknown as MarkdownView;
+				const editor = view.editor as Editor;
+
 				if (leaf && leaf.view instanceof MarkdownView) {
 					setEditorClass(this);
+					setTimeout(() => {
+						generatePortogressCheckboxSummary(this.app, editor);
+					});
 				}
 			})
 		);
